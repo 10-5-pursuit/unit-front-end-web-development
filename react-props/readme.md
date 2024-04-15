@@ -12,6 +12,11 @@ So far you've learned about React components. However, while you could make mult
 
 # Introduction to props
 
+Props allow components to **pass information** to child components that they're rendering. Components can use props to consume data from their parents and render it to the user. This permits us to reuse the same component with relative ease. For example, we don't need distinct `UserProfile` components if each user's profile consumes the same shape of information and renders that information in the same way. We can use the same component and pass down unique user information as props.
+
+Props also allow us to intelligently divide responsibilities between components. We can create components whose only job is to fetch, store, and update information, and we can have components whose only job is to receive props and render information. More on that separation of concerns in a future lesson.
+
+
 In previous lessons, we've seen how to build React components and display them on a website. However, we had no way to make two different versions of the same component. For example, we should be able to create a `UserProfile` component with the name "Robert Kahn", then create a separate `UserProfile` component with the name "Vinton Cerf".
 
 Another example of this is Amazon's product search. Take a look at, say, a search for t-shirts:
@@ -21,12 +26,6 @@ Another example of this is Amazon's product search. Take a look at, say, a searc
 Each of these t-shirt listings represents a separate instance of the **exact same component**. This component is reused in many different places in the application.
 
 In order to have the same component display different information, we can use **props**.
-
-## Props
-
-Props allow components to **pass information** to child components that they're rendering. Components can use props to consume data from their parents and render it to the user. This permits us to reuse the same component with relative ease. For example, we don't need distinct `UserProfile` components if each user's profile consumes the same shape of information and renders that information in the same way. We can use the same component and pass down unique user information as props.
-
-Props also allow us to intelligently divide responsibilities between components. We can create components whose only job is to fetch, store, and update information, and we can have components whose only job is to receive props and render information. More on that separation of concerns in a future lesson.
 
 Returning to our Amazon search page example, let's say our components (`ProductItem`) are the _child components_ of a component for the entire page (`ProductPage`). `ProductPage` stores the result of a large network request on the first render of the page, getting an array with fifty products. We then map through this array and send each individual product to a `ProductItem` component by way of props, which processes the product's information into something user-facing.
 
