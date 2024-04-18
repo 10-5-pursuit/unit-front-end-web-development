@@ -40,7 +40,7 @@ const copySomeNumsAgain = [...someNumsAgain]
 copySomeNumsAgain.reverse()
 
 console.log('Some nums again',  someNumsAgain)
-console.log('Copied some nums again,copySomeNumsAgain)
+console.log('Copied some nums again', copySomeNumsAgain)
 
 
 ```
