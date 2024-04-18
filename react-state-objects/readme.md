@@ -16,7 +16,9 @@ Let's look at an example:
 ```js
 const someNums = [10, 20, 30, 40];
 
-const reverseSomeNums = someNums.reverse();
+const reverseSomeNums = someNums;
+
+someNums.reverse();
 
 console.log("reverse someNums", reverseSomeNums);
 console.log("someNums", someNums);
