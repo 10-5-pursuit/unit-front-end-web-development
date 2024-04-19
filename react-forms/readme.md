@@ -169,7 +169,7 @@ function handleSubmit(event) {
 
 Press the submit button. What happens? If you look closely, you will notice that the page is reloaded and you won't see the console log. This is the normal default behavior of a form. To prevent this behavior, you must call `event.preventDefault()`
 
-```js
+
 function handleSubmit(event) {
   event.preventDefault();
   console.log("form submitted");
