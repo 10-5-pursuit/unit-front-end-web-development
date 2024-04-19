@@ -50,7 +50,7 @@ function handleCheckboxChange() {}
 Initially, when you add an input element, you can interact with it. This [checkbox](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox) can be clicked to check and uncheck the value. When the checkbox is unchecked the value of `checked` is equal to `false`, when the checkbox is checked th value of `checked` is `true`
 
 ```html
-<input type="checkbox />
+<input type="checkbox" />
 ```
 
 > **Note:** Most inputs
